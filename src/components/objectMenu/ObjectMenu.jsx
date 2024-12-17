@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import "./ObjectMenu.css";
 
 const ObjectMenu = ({ onPress, activeButton, manually, changeRunStatus,runHandler }) => {
@@ -11,7 +11,7 @@ const ObjectMenu = ({ onPress, activeButton, manually, changeRunStatus,runHandle
     <>
       <div className="object-menu">
         <dev className="object">
-          <a
+          <button
             className={
               activeButton === "html"
                 ? "object-link active-object"
@@ -20,8 +20,8 @@ const ObjectMenu = ({ onPress, activeButton, manually, changeRunStatus,runHandle
             onClick={() => pressHandler("html")}
           >
             index.html
-          </a>
-          <a
+          </button>
+          <button
             className={
               activeButton === "css"
                 ? "object-link active-object"
@@ -30,8 +30,8 @@ const ObjectMenu = ({ onPress, activeButton, manually, changeRunStatus,runHandle
             onClick={() => pressHandler("css")}
           >
             style.css
-          </a>
-          <a
+          </button>
+          <button
             className={
               activeButton === "js"
                 ? "object-link active-object"
@@ -40,7 +40,7 @@ const ObjectMenu = ({ onPress, activeButton, manually, changeRunStatus,runHandle
             onClick={() => pressHandler("js")}
           >
             script.js
-          </a>
+          </button>
         </dev>
         <div className="button-group">
           <div className="checkbox-group">

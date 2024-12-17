@@ -64,7 +64,8 @@ function App() {
       }
     }, 200)
     return () => clearTimeout(timeout);
-  }, [html, css, js, isManually]);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [html, css, js]);
   return (
     <div className="container">
       <header className="header-container">
