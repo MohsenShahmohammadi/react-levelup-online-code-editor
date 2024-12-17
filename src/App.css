@@ -17,7 +17,7 @@
 .main-container {
   display: flex;
   flex-direction: row;
-  height: calc(100vh - 13vmin);
+  height: calc(100vh - 110px);
 }
 .code-container {
   width: 30%;

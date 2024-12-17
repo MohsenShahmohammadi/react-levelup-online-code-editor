@@ -2,16 +2,20 @@ import "./App.css";
 import Nav from "./components/navComponent/Nav";
 import LogoGroup from "./components/logoGroup/LogoGroup";
 import ObjectMenu from "./components/objectMenu/ObjectMenu";
-import { useRef, useState,useEffect } from "react";
+import {useState,useEffect } from "react";
+import useLocalStorage from "./storage/Storage";
 
 function App() {
-  const [html, setHtml] = useState("");
-  const [css, setCSS] = useState("");
-  const [js, setJS] = useState("");
+  // const [html, setHtml] = useState("");
+  // const [css, setCSS] = useState("");
+  // const [js, setJS] = useState("");
+  const [html, setHtml] = useLocalStorage("html","");
+  const [css, setCSS] = useLocalStorage("css","");
+  const [js, setJS] = useLocalStorage("js","");
 
   const [activeObject, setActiveObject] = useState("html");
-  const [inputRef, setInputRef] = useState(null);
-  const [isManually, setIsManually] = useState(true);
+  const [inputRef, setInputRef] = useState(html);
+  const [isManually, setIsManually] = useLocalStorage("runType",false);
   const [render, setRender] = useState("");
 
   const objectMenuHandler = (object) => {
