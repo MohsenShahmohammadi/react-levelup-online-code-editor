@@ -1,0 +1,53 @@
+.object-menu {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background-color: darkgray;
+  height: 5vmin;
+  padding: 0 10px;
+}
+.object {
+  display: flex;
+  flex-direction: row;
+}
+.object-link {
+  padding: 10px;
+  margin: 0 5px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  transition: all 0.2s;
+}
+.object-link:hover,
+.active-object {
+  background-color: brown;
+  color: white;
+}
+.button-group {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.checkbox {
+  margin: 5px;
+}
+
+.btn-run {
+  padding: 10px 20px;
+  margin: 0 5px;
+  border-radius: 5px;
+  border: 1px solid gray;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.btn-run:hover {
+  background-color: black;
+  color: white;
+}
+.btn-onTime {
+  padding: 10px 20px;
+  margin: 0 5px;
+  border-radius: 5px;
+  border: 1px solid gray;
+  transition: all 0.2s;
+}
